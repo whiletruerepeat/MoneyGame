@@ -27,7 +27,7 @@ $(OBJ_DIR)/player.o: $(SRC_DIR)/player.cpp $(SRC_DIR)/player.h
 
 # Windows build
 testwindows: $(WIN_OBJS)
-	$(CXX_WIN) $(WIN_OBJS) -o $(BIN_DIR)/test.exe
+	$(CXX_WIN) -static -static-libgcc -static-libstdc++ $(WIN_OBJS) -o $(BIN_DIR)/test.exe
 
 $(OBJ_DIR)/testjoueur_win.o: $(SRC_DIR)/test.cpp 
 	$(CXX_WIN) $(CXXFLAGS) -c $< -o $@
