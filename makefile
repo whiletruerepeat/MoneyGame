@@ -1,6 +1,10 @@
-all : test
+all : testlinux testwindows
 
-test : obj/testjoueur.o obj/player.o
+testwindows : obj/testjoueur.o obj/player.o
+	g++ obj/testjoueur.o obj/player.o -o bin/test.exe
+
+
+testlinux : obj/testjoueur.o obj/player.o
 	g++ obj/testjoueur.o obj/player.o -o bin/test
 
 obj/testjoueur.o: src/test.cpp 
