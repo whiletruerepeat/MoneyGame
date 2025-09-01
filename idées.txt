@@ -1,0 +1,1 @@
+1ère étape : faire un jeu dans lequel il est possible d'obtenir de l'argent en cliquant sur une icône.

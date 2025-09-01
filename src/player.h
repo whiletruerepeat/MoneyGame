@@ -1,11 +1,12 @@
 #ifndef _PLAYER_H
 #define _PLAYER_H
 #include <math.h>
+#include <unistd.h>
 
 class player{
     private :
 
-        char* username;
+        std::string username;
         int exp;
         int money;
         int id;
