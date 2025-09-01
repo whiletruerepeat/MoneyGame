@@ -1,6 +1,6 @@
 #include "player.h"
 
-player::player(char* u, int e, int m, int i, int l){
+player::player(std::string u, int e, int m, int i, int l){
     username = u;
     exp = e;
     money = m;
@@ -8,18 +8,13 @@ player::player(char* u, int e, int m, int i, int l){
     lvl = l;
 }
 
-player::~player(){
-    delete username;
-    username = nullptr;
-}
-
-const char* player::getuser(){return username;};
+string player::getuser(){return username;};
 const float player::getexp(){return exp;};
 const float player::getmoney(){return money;};
 const int player::getid(){return id;};
 const int player::getlvl(){return lvl;};
 
-void player::setuser(char* u){username = u;};
+void player::setuser(string u){username = u;};
 void player::setexp(float e){exp = e;};
 void player::setmoney(float m){money = m;};
 void player::setid(int i){id = i;};

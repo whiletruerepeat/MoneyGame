@@ -14,13 +14,13 @@ class game{
 
     public :
 
-        game();
-
         player getplayerinfo();
 
         void saveloadfile();
 
         std::string loadsavefile(std::string username);
+
+        void updategame();
 };
 
 

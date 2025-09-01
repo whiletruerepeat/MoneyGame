@@ -2,11 +2,14 @@
 #define _PLAYER_H
 #include <math.h>
 #include <unistd.h>
+#include <string>
+
+using namespace std;
 
 class player{
     private :
 
-        std::string username;
+        string username;
         int exp;
         int money;
         int id;
@@ -14,17 +17,15 @@ class player{
 
     public :
 
-        player(char* u, int e, int m, int i, int l);
+        player(string u, int e, int m, int i, int l);
 
-        ~player();
-
-        const char* getuser();
+        string getuser();
         const float getexp();
         const float getmoney();
         const int getid();
         const int getlvl();
 
-        void setuser(char* u);
+        void setuser(string u);
         void setexp(float e);
         void setmoney(float m);
         void setid(int i);

@@ -9,7 +9,7 @@ OBJ_DIR = obj
 BIN_DIR = bin
 
 # Files
-LINUX_OBJS = $(OBJ_DIR)/testjoueur.o $(OBJ_DIR)/player.o
+LINUX_OBJS = $(OBJ_DIR)/testjoueur.o $(OBJ_DIR)/player.o $(OBJ_DIR)/menu.o $(OBJ_DIR)/game.o
 WIN_OBJS   = $(OBJ_DIR)/testjoueur_win.o $(OBJ_DIR)/player_win.o
 
 # Targets
@@ -18,6 +18,12 @@ all: testlinux testwindows
 # Linux build
 testlinux: $(LINUX_OBJS)
 	$(CXX) $(LINUX_OBJS) -o $(BIN_DIR)/test
+
+$(OBJ_DIR)/game.o: $(SRC_DIR)/game.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@ 
+
+$(OBJ_DIR)/menu.o: $(SRC_DIR)/menu.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 $(OBJ_DIR)/testjoueur.o: $(SRC_DIR)/test.cpp 
 	$(CXX) $(CXXFLAGS) -c $< -o $@
